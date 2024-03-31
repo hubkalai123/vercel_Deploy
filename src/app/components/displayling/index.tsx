@@ -1,13 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import { contactList, DeleteList } from "../Actions/PostAction";
-import { useDispatch } from 'react-redux';
-import { setDataDisplay } from '../Actions/reducers/todos';
-import TableDataDisplay from './Table';
 
 export default function Home() {
     const [contacts, setContacts] = useState<any>(null);
-    const dispatch = useDispatch();
     useEffect(() => {
         const fetchContacts = async () => {
             //getting data from serer;
